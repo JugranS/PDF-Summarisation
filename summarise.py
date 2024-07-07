@@ -24,6 +24,25 @@ def process_text(text, embeddings):
 
     return knowledgeBase
 
+
+
+def sidebar(LLM_CHOICES):
+    with st.sidebar:
+        warning = """
+
+**Warnings and Guidance**:
+
+* Please do not enter any sensitive information in the chat input. This goes to LLM companies.
+* LLM may hallucinate answers. Make sure you verify them.
+* Using larger context models (e.g. GPT-4-32k or Claude-2-100k) may yield better results.
+        """
+
+        st.markdown(warning)
+
+        llm = st.selectbox("Model", LLM_CHOICES)
+        return llm
+
+
 def summarise(llm, embeddings):
     st.title("📄Semantic Scholar")
     st.write("Created by Arnav Khanna, Salaj Shekhar Jugran and Surya Prakash Singh")

@@ -1,4 +1,4 @@
-from summarise import summarise
+from summarise import summarise, sidebar
 import os
 from dotenv import load_dotenv
 
@@ -6,6 +6,12 @@ from langchain_openai import ChatOpenAI
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
+LLM_CHOICES = [
+    "gpt-3.5-turbo",
+    "gpt-4o",
+    "gpt-4-turbo",
+    "gpt-4"
+]
 
 def load_openai_api_key():
     dotenv_path = ".env"
@@ -22,7 +28,7 @@ def main():
         st.error(str(e))
         return
     embeddings = HuggingFaceEmbeddings(model_name='allenai/longformer-base-4096')
-    OpenAIModel = "gpt-3.5-turbo"
+    OpenAIModel = sidebar(LLM_CHOICES)
     llm = ChatOpenAI(model=OpenAIModel, temperature=0.5)
     summarise(llm, embeddings)
 
