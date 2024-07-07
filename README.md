@@ -6,22 +6,22 @@ Tired of sifting through lengthy PDFs? This project leverages the power of Large
 # Key Features:
 
 Accurate and Informative Summaries: 
-Utilizes state-of-the-art LLM technology to provide high-quality summaries that capture the essence of your documents.
+- Utilizes state-of-the-art LLM technology to provide high-quality summaries that capture the essence of your documents.
 
 Easy to Use: 
-Simply upload your PDF and receive a summary in seconds. No technical expertise required.
+- Simply upload your PDF and receive a summary in seconds. No technical expertise required.
 
 Open Source: 
-Built on open-source technologies, allowing for transparency and community contributions.
+- Built on open-source technologies, allowing for transparency and community contributions.
 
 Extensible: 
-Easily integrate this summarizer into your existing workflows or applications.
+- Easily integrate this summarizer into your existing workflows or applications.
 
 # How to run?
-Clone this repository.
-Install the required dependencies.
-Run the standalone_app.py
-Upload your PDF and start summarizing!
+* Clone this repository.
+* Install the required dependencies.
+* Run the standalone_app.py
+* Upload your PDF and start summarizing!
 
 # Contributions Welcome:
 
